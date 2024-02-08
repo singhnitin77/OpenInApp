@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+span {
+  font-family: var(--font-nuni);
+}
+ 
+h1 {
+  font-family: var(--font-mont);
+}
+
+h3 {
+  font-family: var(--font-lato);
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

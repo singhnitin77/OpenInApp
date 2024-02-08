@@ -1,8 +1,27 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato,Nunito, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Roboto_Mono } from 'next/font/google'
+ 
+const nuni = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nuni',
+  display: 'swap',
+})
+ 
+const lato = Lato({
+  weight: ['100','300','400','900', '700'],
+  subsets: ['latin'],
+  variable: '--font-lato',
+  display: 'swap',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-mont',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${montserrat.variable} ${nuni.variable} ${lato.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

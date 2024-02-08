@@ -4,7 +4,6 @@ import Image from "next/image";
 import Logo from "../../../public/Logo.png"
 import HumanPic from "../../../public/HumanPic.png"
 import React, { useEffect, useState, useRef } from 'react'
-import CSVTable from "@/components/CSVTable";
 import Sidebar from "@/components/Sidebar";
 // import { useState } from 'react';
 import Papa from 'papaparse';

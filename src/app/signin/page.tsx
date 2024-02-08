@@ -75,7 +75,7 @@ export default function Login() {
 
     const url = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     return (
-        <div className="flex flex-row h-screen">
+        <div className="flex flex-row h-full">
             <div className="w-[218px] bg-[#fff] px-5 py-9">
                 {/* <div className="flex flex-row gap-3 items-center justify-center pb-5">
                     <Image src={Logo} alt="Logo Image" width={42} height={42} />

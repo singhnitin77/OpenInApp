@@ -17,7 +17,7 @@ export default function Login() {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [selectedValues, setSelectedValues] = useState(Array(csvData.length).fill(''));
 
-    const handleSelectChange = (event, rowIndex) => {
+    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>, rowIndex: number) => {
         const updatedSelectedValues = [...selectedValues];
         updatedSelectedValues[rowIndex] = event.target.value;
         setSelectedValues(updatedSelectedValues);
@@ -207,15 +207,15 @@ export default function Login() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {csvData.map((row, rowIndex) => (
+                                        {csvData.map((row:any, rowIndex:number) => (
                                             <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-white rounded-[8px] h-[58px]' : 'h-[58px]'}>
-                                                {Object.values(row).map((value, columnIndex) => (
+                                                {Object.values(row).map((value:any, columnIndex:number) => (
                                                     <td key={columnIndex} className="px-4 py-2 text-[14px] font-normal">
                                                         {columnIndex === 3 ? (
                                                             <select value={selectedValues[rowIndex]} onChange={(e) => handleSelectChange(e, rowIndex)} 
                                                             className="text-[#000] w-[132px] h-[32px] rounded-sm outline-none">
                                                                 <option value="" hidden className="flex items-center justify-center">Select Tags</option>
-                                                                {value.split(',').map((element, index) => (
+                                                                {value.split(',').map((element:string, index:number) => (
                                                                     <option className="bg-[#f2f2f2]" key={index} value={element.trim()}>
                                                                         {element.trim()}
                                                                     </option>
